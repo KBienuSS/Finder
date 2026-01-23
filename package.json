@@ -2,6 +2,18 @@
     "name": "task-runner",
     "version": "1.0.0",
     "description": "",
+    "keywords": [],
+    "homepage": "https://github.com/KBienuSS/Finder#readme",
+    "bugs": {
+        "url": "https://github.com/KBienuSS/Finder/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KBienuSS/Finder.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "type": "commonjs",
     "main": "index.html",
     "scripts": {
         "init-project": "npm install && npm-run-all init:*",
@@ -27,9 +39,10 @@
         "watch:sassprefixer": "onchange \"src/sass/**/*.scss\" -- npm run build-dev",
         "watch:copy": "onchange -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" -- copyfiles -a -u 1 {{changed}} dist"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "dependencies": {
+        "json-server": "^0.16.3",
+        "sass": "^1.35.1"
+    },
     "devDependencies": {
         "autoprefixer": "^10.2.4",
         "browser-sync": "^2.26.3",
@@ -45,9 +58,5 @@
         "rimraf": "^3.0.2",
         "stylelint": "^9.10.1",
         "stylelint-scss": "^3.5.4"
-    },
-    "dependencies": {
-        "json-server": "^0.16.3",
-        "sass": "^1.35.1"
     }
 }
