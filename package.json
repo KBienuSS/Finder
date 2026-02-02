@@ -40,8 +40,10 @@
         "watch:copy": "onchange -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" -- copyfiles -a -u 1 {{changed}} dist"
     },
     "dependencies": {
+        "http": "^0.0.1-security",
         "json-server": "^0.16.3",
-        "sass": "^1.35.1"
+        "sass": "^1.35.1",
+        "server": "^1.0.42"
     },
     "devDependencies": {
         "autoprefixer": "^10.2.4",

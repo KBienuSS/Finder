@@ -5,17 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Finder</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="nav">
         <div class="menu">
-            <a href="">About</a>
-            <a href="">Finder</a>
+            <a href="#" class="about-us-link">About</a>
+            <a href="#" class="finder-link">Finder</a>
         </div>
-        <h1>PATHFINDER</h1>
-        <h2>FOR TRAVELLERS</h2>
-        <span>test</span>
+        <div class="title">
+            <h1>PATHFINDER</h1>
+            <p>FOR TRAVELLERS</p>
+        </div>
     </nav>
+    <div class="container">
+        <div class="about-us">
+            <div class="left-container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000">
+                <img src="./images/1.jpg" alt="photo-1">
+                <div class="text-description">
+                    <h1>PLAN YOUR JOURNEYS</h1>
+                    <span>Pick attractions and book hotel</span>
+                </div>
+            </div>
+            <div class="right-container" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+                <img src="./images/2.jpg" alt="photo-2">
+                <div class="text-description">
+                    <h1>MINIMALIZE BOREDOM</h1>
+                    <span>Pick routes that are short and attractive</span>
+                </div>
+            </div>
+        </div>
+        <section id="finder">
+            <div class="finder-wrapper container"></div>
+        </section>
+    </div>
+    <div class="all-rights">
+        <span>All rights reserved</span>
+    </div>
+    <div class="summary-wrapper">
+    </div>
+    <script id="template-summary" type="text/x-handlebars-template">
+        <div class="summary">
+        </div>
+        <div class="summary-container">
+            <div class="close-tab">
+                X
+            </div>
+                <h1>Summary</h1>
+                <p><span>FULL ROUTE: </span><span class="main-color-span">{{ fullRoute }}</span> FIELDS</p>
+                <p><span>THE LONGEST ROUTE:</span> <span class="red-span">{{ longestRoute }}</span> FIELDS</p>
+                <p><span>THE SHORTEST ROUTE:</span> <span class="green-span">{{ shortestRoute }}</span> FIELDS</p>
+        </div>
+    </script>
+    <script id="template-finder-widget" type="text/x-handlebars-template">
+        <div class="finder-div">
+            <h2>{{ title }}</h2>
+            <table class="finder-table">
+            </table>
+            <button type="submit" class="table-button">{{ buttonText }}</button>
+        </div>
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>
